@@ -19,7 +19,7 @@ private:
     int year;
 public:
     //set birthdate here
-    void setDate(int dMonth, int dDay, int dYear);
+    void setDate();
     
     
     //functions to return birthdate variables
@@ -32,7 +32,7 @@ public:
     
     //birthdate constructor, having pre-assigned values
     birthDate(int dmonth = 1, int dDay = 1, int dYear = 1900);
-    
+    ~birthDate();
 };
 
 

@@ -12,9 +12,18 @@ using namespace std;
 
 //FUNCTION IMPLEMENTATIONS.
 //set date
-void birthDate::setDate(int dMonth, int dDay, int dYear){
+void birthDate::setDate(){
+    int dMonth = 1;
+    int dDay = 1;
+    int dYear = 1900;
+    cout<<" Enter birth month: ";
+    cin>>dMonth;
     month = dMonth;
+    cout<<" Enter day: ";
+    cin>>dDay;
     day = dDay;
+    cout<<" Enter birth year: ";
+    cin>>dYear;
     year = dYear;
 }
 //get month
@@ -32,7 +41,7 @@ int birthDate::getYear()const{
     return year;
 }
 void birthDate::displayDate()const{
-    cout<<month<<"/"<<day<<"/"<<year;
+    cout<<" "<<month<<"/"<<day<<"/"<<year;
 }
 
 //birth-date constructor
@@ -41,3 +50,4 @@ birthDate::birthDate(int dMonth, int dDay, int dYear){
     day = dDay;
     year = dYear;
 }
+birthDate::~birthDate(){}

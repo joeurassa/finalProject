@@ -19,21 +19,27 @@ private:
     //thiss project. More feautures coming soon!
     string firstName;
     string lastName;
+    string eType;
     
 public:
     //functions to set, get and construct the object 'person'
     
     //set names
-    void setName(string first, string last);
+    void setName();
+    void setEtype();
     
     //get names from user or pre-set in code
     string getFirstName()const;
     string getLastName()const;
+    //set and get employee type
+    string getEtype()const;
     
     //funtions to display names, this will be inherited in the program
-    void displayName()const;
-    
-    person(string first, string last);
+    void displayPerson()const;
+    void displayType()const;
+    person(string first, string last,string emType);
+    person();
+    ~person();
     
     
 };

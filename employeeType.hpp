@@ -7,13 +7,13 @@
 
 #ifndef employeeType_hpp
 #define employeeType_hpp
-
+#include <iostream>
 #include <stdio.h>
 #include <string>
 
+
 #include "person.hpp"
 #include "birthDate.hpp"
-
 
 
 using namespace std;
@@ -24,10 +24,15 @@ private:
     birthDate bDate;
     int emID;
 public:
-    void setEmployeeData(string first, string last, int dMonth, int dDay, int dYear, int empID);
-    void displayInfo()const;
-    employee(string first ="", string last = "", int dMonth = 1, int dDay = 1, int dYear = 1900, int empID = 0);
-  
+    //virtual displayInfo function will be called when printing of employee
+    //required, either full time or part time.
+    void virtual displayInfo();
+    void setEmployeeData();
+    void addEmployee();
+    employee();
+    employee(string first, string last, int dMonth, int dDay, int dYear, int empID, string eType);
+~employee();
+    
 };
 
 #endif /* employeeType_hpp */

@@ -10,9 +10,7 @@
 
 #include <stdio.h>
 #include <iostream>
-#include "birthDate.hpp"
 #include "person.hpp"
-#include "employeeID.hpp"
 #include "employeeType.hpp"
 
 
@@ -21,17 +19,21 @@ class partTime:public employee{
 private:
     double payRate;
     double hoursWorked;
-    double daysOnduty;
-    double daysOffduty;
-    double sickDays;
-public:
-    double getPayRate();
-    double getHoursWorked();
-    double getDaysOnDuty();
-    double getDaysOffDuty();
-    double getSickDays();
+    person tasker;
     
-//partTime(string, string, int,double,double,double,double,double);
+public:
+    //set & get payrate
+    void setPayRate();
+    double getPayRate();
+    //set & get employee worked hours
+    void setHrsWorked();
+    double getHoursWorked();
+    //calculate salary.
+    double getPaid();
+    partTime(string, string, int,double,double);
+    partTime();
+    ~partTime();
 };
+
 
 #endif /* partTime_hpp */

@@ -8,28 +8,41 @@
 
 #include <iostream>
 #include <iomanip>
+#include "employeeType.hpp"
 #include "partTime.hpp"
 
 using namespace std;
 
 //get & or calculate values
-
-
+void partTime:: setPayRate(){
+    double pRate = 15;
+    payRate = pRate;
+}
+void partTime::setHrsWorked(){
+    double hrsWorked = 0;
+    if (hrsWorked == 0) {
+        cout<<" No hours for ";tasker.displayPerson();
+        cout<<endl;
+    }
+    else{
+        hoursWorked = hrsWorked;
+        tasker.displayPerson();
+        cout<<" Worked :"<<hrsWorked<<endl;
+    }
+}
 double partTime::getPayRate(){
     return payRate;
 }
 double partTime::getHoursWorked(){
     return hoursWorked;
 }
-double partTime::getDaysOnDuty(){
-    return daysOnduty;
-}
-double partTime::getDaysOffDuty(){
-    return daysOffduty;
-}
-double partTime::getSickDays(){
-    return sickDays;
-}
- 
-//partTime::partTime(string, string, int,double,double,double,double,double){}
 
+double partTime::getPaid(){
+    double pay = getPayRate()*getHoursWorked();
+    return pay;
+}
+
+ //constructor with members
+partTime::partTime(string,string, int,double,double):employee(){}
+//empty constructor
+partTime::partTime(){}
